@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import Header from './components/header'
 import Hero from './components/hero'
@@ -8,7 +7,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="bg-amber-300">
         <Header />
         <Hero />
         <Footer />
