@@ -1,7 +1,20 @@
 @import "tailwindcss";
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+@theme {
+  --color-midnight: #121063;
+  --color-tahiti: #3ab7bf;
+  --color-bermuda: #78dcca;
+  --color-platinum: #E5E4E2;
+  --color-offWhite: #FAF9F6;
+  --color-googleGreen: #34A853;
+  --color-googleRed: #EA4335;
+  --color-googleYellow: #FBBC05;
+  --color-googleBlue: #4285F4;
+  --color-pastelGreen: #C1E1C1;
+  --color-jetBlack: #343434;
+--color-lightGrey: #D3D3D3;
+}
+
+:root {
+  background-color: #343434;
 }
