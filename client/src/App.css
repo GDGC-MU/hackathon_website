@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @theme {
   --color-midnight: #121063;
   --color-tahiti: #3ab7bf;
@@ -12,9 +13,12 @@
   --color-googleBlue: #4285F4;
   --color-pastelGreen: #C1E1C1;
   --color-jetBlack: #343434;
---color-lightGrey: #D3D3D3;
+  --color-lightGrey: #D3D3D3;
+  --font-chewy: "Chewy";
+  --color-jasperGreen: #046A38;
 }
 
 :root {
   background-color: #343434;
+  overflow: hidden;
 }

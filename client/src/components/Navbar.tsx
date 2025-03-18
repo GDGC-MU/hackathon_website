@@ -33,10 +33,10 @@ export const Navbar = () => {
 
     return (
         <nav
-            className={`w-full top-0 fixed start-0 flex flex-wrap flex-row justify-between md:justify-around items-center backdrop-blur shadow-lg transition-all duration-300
+            className={`z-50 w-full top-0 fixed start-0 flex flex-wrap flex-row justify-between md:justify-around items-center backdrop-blur shadow-lg transition-all duration-300
                 ${scrolled ? "bg-lightGrey/60" : "bg-platinum/30"}`}
-        >
-            <img src={Logo} height="80px" width="120px" alt="Logo" />
+        >   <button onClick={() => navigate("/")}><img src={Logo} height="80px" width="120px" alt="Logo" /></button>
+
 
             {/* Hamburger might change the toggle menu to something better*/}
             <div className="md:hidden flex items-center pr-8">
@@ -66,13 +66,13 @@ export const Navbar = () => {
 
             {/* Mobile Menu  */}
             {isOpen && (
-                <div className="md:hidden fixed inset-0 bg-pink-400 bg-opacity-75 flex justify-end items-end h-100 w-50">
-                    <div className="text-center space-y-4">
+                <div className="md:hidden fixed inset-0 top-25 mx-4 rounded-3xl backdrop-blur shadow-lg bg-lightGrey/60 bg-opacity-75 flex h-fit w-max-full py-20 justify-center z-50">
+                    <div className="text-center items-center space-y-4 pt-8 font-bold ">
                         {navItems.map((item) => (
                             <div key={item.label}>
                                 <button
                                     onClick={() => scrollToSection(item.href)}
-                                    className="block text-gray-700 hover:text-blue-600 focus:outline-none"
+                                    className="block text-jetBlack border-2 bg-white py-2 w-40 rounded-2xl hover:text-blue-600 focus:outline-none"
                                 >
                                     {item.label}
                                 </button>
@@ -82,15 +82,13 @@ export const Navbar = () => {
                     <div className="hidden md:flex">
                         <button
                             onClick={() => navigate("/signup")}
-                            className="text-black font-bold bg-googleGreen hover:bg-googleRed border-2 px-6 py-0 rounded-3xl h-12 mt-2"
+                            className="text-black font-bold bg-googleGreen hover:bg-googleRed border-2 px-6 py-0 rounded-3xl h-10"
                         >
                             Apply
                         </button>
                     </div>
                 </div>
             )}
-
-            {/* Apply Button that will direct to auth form */}
             <div className="hidden md:flex">
                 <button
                     onClick={() => navigate("/signup")}
