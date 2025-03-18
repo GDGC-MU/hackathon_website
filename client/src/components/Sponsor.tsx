@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Sponsor = () => {
   return (
-    <div>Sponsor</div>
+    <div className="bg-googleGreen h-screen">Sponsor</div>
   )
 }
 export default Sponsor;
