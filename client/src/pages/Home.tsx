@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import Marquee from "../components/marquee";
 import Sponsor from "../components/Sponsor";
 import FAQ from "../components/FAQ";
+import Play from "../components/Play";
 
 export const Home = () => {
     useEffect(() => {
@@ -22,7 +23,6 @@ export const Home = () => {
             wheelMultiplier: 1,
             gestureOrientation: "vertical",
         });
-
         lenis.on("scroll", (e) => {
             console.log(e);
         });
@@ -42,7 +42,9 @@ export const Home = () => {
             <Prizes />
             <Sponsor />
             <FAQ />
+            <Play />
             <Footer />
+
         </div>
     );
 };
