@@ -6,26 +6,26 @@ export interface NavItems {
 export const navItems: NavItems[] = [
     {
         label: "Tracks",
-        href: "#track"
+        href: "/#track"
     },
     {
         label: "Registration",
-        href: "#registration"
+        href: "/#registration"
     },
     {
         label: "Schedule",
-        href: "#schedule"
+        href: "/#schedule"
     },
     {
         label: "Prizes",
-        href: "#prizes"
+        href: "/#prizes"
     },
     {
         label: "Sponsorship",
-        href: "#sponsorship"
+        href: "/#sponsorship"
     },
     {
         label: "About",
-        href: "#about",
+        href: "/#about",
     },
 ];
