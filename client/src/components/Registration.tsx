@@ -13,7 +13,7 @@ export const Registration = () => {
   });
 
   return (
-    <div className="bg-googleRed h-auto pt-20 pb-40 px-4 border-b-2">
+    <div className="bg-googleRed h-auto pt-20 pb-40 px-4 border-b-2" id="registration">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ export const Registration = () => {
             title: "Attendee Registration",
             description: "Register as an attendee and be part of the hackathon experience at Manhattan University.",
             shadowColor: "googleYellow",
-            navigate: "/signup",
+            navigate: "https://forms.gle/DBVnZLYzVvV2CAmr5",
             character: Attendee,
           },
           {
