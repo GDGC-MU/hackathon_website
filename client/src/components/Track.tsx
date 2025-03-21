@@ -6,7 +6,7 @@ import AI from "../assets/AI.gif";
 
 export const Track = () => {
   return (
-    <div className="bg-googleBlue h-auto pt-20 pb-40 px-4 border-b-2">
+    <div className="bg-googleBlue h-auto pt-20 pb-40 px-4 border-b-2" id="track">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
