@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import { navItems } from "./navData";
-
+import Dino from "../assets/dino.gif";
 export const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +35,10 @@ export const Navbar = () => {
         <nav
             className={`z-50 w-full top-0 fixed start-0 flex flex-wrap flex-row justify-between md:justify-around items-center backdrop-blur shadow-lg transition-all duration-300
                 ${scrolled ? "bg-lightGrey/60" : "bg-platinum/30"}`}
-        >   <button onClick={() => navigate("/")}><img src={Logo} height="80px" width="120px" alt="Logo" /></button>
+        >
+            <button onClick={() => window.location.replace("/#home")}>
+                <img src={Logo} height="80px" width="120px" alt="Logo" />
+            </button>
 
 
             {/* Hamburger might change the toggle menu to something better*/}
@@ -51,12 +54,12 @@ export const Navbar = () => {
             </div>
 
             {/* Desktop Navbar */}
-            <div className="hidden md:flex space-x-6">
+            <div className="hidden md:flex space-x-6 z-50 top-0">
                 {navItems.map((item) => (
                     <div key={item.label} className="relative">
                         <button
-                            onClick={() => scrollToSection(item.href)}
-                            className="text-jetBlack hover:text-blue-700 focus:outline-none"
+                            onClick={() => window.location.replace(item.href)}
+                            className="text-jetBlack hover:text-blue-700 focus:outline-none z-50 top-0"
                         >
                             {item.label}
                         </button>
@@ -89,13 +92,16 @@ export const Navbar = () => {
                     </div>
                 </div>
             )}
-            <div className="hidden md:flex">
+            {/* <div className="hidden md:flex">
                 <button
                     onClick={() => navigate("/signup")}
                     className="text-black font-bold bg-googleGreen hover:bg-googleRed border-2 px-6 py-0 rounded-3xl h-12 mt-2"
                 >
                     Apply
                 </button>
+            </div> */}
+            <div className="hidden md:flex z-50 top-0">
+                <img src={Dino} width="50" />
             </div>
         </nav>
     );
